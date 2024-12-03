@@ -40,6 +40,10 @@ def create_new_ipd_admission(patient_id: str):
       "admission_id": admission_id,
       "admitted_on": datetime.now(UTC),
       "patient_id": patient_id,
+      "assigned_doctor": {
+        "doctor_id": assigned_doctor["doctor_id"],
+        "doctor_name": assigned_doctor["doctor_name"]
+      },
       "patient_name": patient_basic_data["name"],
       "department": medical_data["department"],
       "history": medical_data["history"],
