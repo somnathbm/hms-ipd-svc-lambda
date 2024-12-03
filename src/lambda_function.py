@@ -1,5 +1,5 @@
 from json import loads
-from utils.helper import create_new_emg_admission
+from utils.helper import create_new_ipd_admission
 
 def lambda_handler(event, context):
     queue_data = event[0]

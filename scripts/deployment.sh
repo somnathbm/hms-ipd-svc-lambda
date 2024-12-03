@@ -2,16 +2,11 @@
 
 # create zip with the dependencies first
 cd src/dependencies
-zip -x "**/__pycache__/**" -r ../../build/deployment.zip *
+zip -x "**/__pycache__/**" -r ../deployment.zip *
 
 # add the source code with the dependencies in a flat directory
-cd ../../build
-zip deployment.zip ../src/lambda_function.py ../src/utils/*
+cd ..
+zip deployment.zip lambda_function.py utils/*
 
-# cd src/dependencies
-# zip -x "**/__pycache__/**" -r ../deployment.zip *
-
-# cd ..
-# zip deployment.zip lambda_function.py utils/*
-
-# mv deployment.zip ../build/
+# move the zip to the build directory
+mv deployment.zip ../build/
